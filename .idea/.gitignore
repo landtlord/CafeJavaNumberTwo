@@ -3,3 +3,5 @@
 /compiler.xml
 
 .idea/*
+
+target/*
