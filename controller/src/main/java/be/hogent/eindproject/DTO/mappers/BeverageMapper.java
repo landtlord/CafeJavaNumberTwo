@@ -5,10 +5,18 @@ import be.hogent.eindproject.model.Beverage;
 
 public class BeverageMapper {
      public static BeverageDTO mapToBeverageDTO(Beverage beverage){
-         return null;
+         BeverageDTO beverageDTO = new BeverageDTO();
+         beverageDTO.setBeverageID(beverage.getBeverageID());
+         beverageDTO.setBeverageName(beverage.getBeverageName());
+         beverageDTO.setPrice(beverage.getPrice());
+         return beverageDTO;
      }
 
      public static Beverage mapToBeverage(BeverageDTO beverageDTO){
-         return null;
+         return new Beverage(
+                 beverageDTO.getBeverageID(),
+                 beverageDTO.getBeverageName(),
+                 beverageDTO.getPrice()
+         );
      }
 }

@@ -12,4 +12,15 @@ public class Beverage {
         this.price = price;
     }
 
+    public int getBeverageID() {
+        return beverageID;
+    }
+
+    public String getBeverageName() {
+        return beverageName;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }
