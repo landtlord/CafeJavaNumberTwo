@@ -18,6 +18,7 @@
         <junit.version>5.5.2</junit.version>
         <assertj.version>3.14.0</assertj.version>
         <lombok.version>1.18.10</lombok.version>
+        <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
     </properties>
 
     <modules>
@@ -65,6 +66,11 @@
                 <groupId>be.hogent.eindproject</groupId>
                 <artifactId>controller</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
