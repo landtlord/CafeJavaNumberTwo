@@ -52,9 +52,5 @@ public class BeverageRepository extends Repository<Beverage> {
                 resultSet.getDouble("price"));
     }
 
-    private void cleanUpEnvironment(Connection connection, Statement statement, ResultSet resultSet) throws SQLException {
-        connection.close();
-        statement.close();
-        resultSet.close();
-    }
+
 }

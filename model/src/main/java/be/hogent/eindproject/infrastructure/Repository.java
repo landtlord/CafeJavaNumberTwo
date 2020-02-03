@@ -1,8 +1,6 @@
 package be.hogent.eindproject.infrastructure;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public abstract class Repository<T> {
 
@@ -11,4 +9,10 @@ public abstract class Repository<T> {
     }
 
     public abstract T findByID(int ID);
+
+    void cleanUpEnvironment(Connection connection, Statement statement, ResultSet resultSet) throws SQLException {
+        connection.close();
+        statement.close();
+        resultSet.close();
+    }
 }
