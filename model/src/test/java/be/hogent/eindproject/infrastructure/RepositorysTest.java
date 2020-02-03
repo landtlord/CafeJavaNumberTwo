@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-class BeverageRepositoryTest {
+class RepositorysTest {
     BeverageRepository beverageRepository = new BeverageRepository();
 
     @Test

@@ -1,6 +1,5 @@
 package be.hogent.eindproject.infrastructure;
 
-import be.hogent.eindproject.model.Beverage;
 import be.hogent.eindproject.model.Waiter;
 
 import java.sql.Connection;
