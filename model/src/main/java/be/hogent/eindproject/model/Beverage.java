@@ -1,8 +1,11 @@
 package be.hogent.eindproject.model;
 
 
+import lombok.Getter;
+
 import java.util.Objects;
 
+@Getter
 public class Beverage {
     private final int beverageID;
     private final String beverageName;
@@ -12,18 +15,6 @@ public class Beverage {
         this.beverageID = beverageID;
         this.beverageName = beverageName;
         this.price = price;
-    }
-
-    public int getBeverageID() {
-        return beverageID;
-    }
-
-    public String getBeverageName() {
-        return beverageName;
-    }
-
-    public double getPrice() {
-        return price;
     }
 
     @Override

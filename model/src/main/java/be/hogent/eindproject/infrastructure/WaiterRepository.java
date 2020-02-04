@@ -13,7 +13,7 @@ public class WaiterRepository extends Repository<Waiter> {
         try {
             Connection connection = getRepoConnection();
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM beverages where beverageID = " + ID);
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM waiters where waiterID = " + ID);
             resultSet.next();
             Waiter waiter = getWaiterFromResultset(resultSet);
             cleanUpEnvironment(connection, statement, resultSet);

@@ -1,6 +1,9 @@
 package be.hogent.eindproject.model;
 
 
+import lombok.Getter;
+
+@Getter
 public class Waiter {
     private final int id;
     private final String lastName;
