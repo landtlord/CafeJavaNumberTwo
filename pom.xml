@@ -18,6 +18,8 @@
         <junit.version>5.5.2</junit.version>
         <assertj.version>3.14.0</assertj.version>
         <lombok.version>1.18.10</lombok.version>
+        <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
+        <mockito.version>3.2.4</mockito.version>
     </properties>
 
     <modules>
@@ -40,9 +42,21 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -65,6 +79,11 @@
                 <groupId>be.hogent.eindproject</groupId>
                 <artifactId>controller</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

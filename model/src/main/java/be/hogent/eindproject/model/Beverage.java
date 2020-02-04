@@ -1,6 +1,11 @@
 package be.hogent.eindproject.model;
 
 
+import lombok.Getter;
+
+import java.util.Objects;
+
+@Getter
 public class Beverage {
     private final int beverageID;
     private final String beverageName;
@@ -12,15 +17,18 @@ public class Beverage {
         this.price = price;
     }
 
-    public int getBeverageID() {
-        return beverageID;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Beverage beverage = (Beverage) o;
+        return beverageID == beverage.beverageID &&
+                Double.compare(beverage.price, price) == 0 &&
+                Objects.equals(beverageName, beverage.beverageName);
     }
 
-    public String getBeverageName() {
-        return beverageName;
-    }
-
-    public double getPrice() {
-        return price;
+    @Override
+    public int hashCode() {
+        return Objects.hash(beverageID, beverageName, price);
     }
 }

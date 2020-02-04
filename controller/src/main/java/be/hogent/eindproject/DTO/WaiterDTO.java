@@ -7,4 +7,5 @@ public class WaiterDTO {
     private int id;
     private String lastName;
     private String firstName;
+    private String password;
 }
