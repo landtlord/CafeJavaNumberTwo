@@ -22,13 +22,11 @@ public class Beverage {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Beverage beverage = (Beverage) o;
-        return beverageID == beverage.beverageID &&
-                Double.compare(beverage.price, price) == 0 &&
-                Objects.equals(beverageName, beverage.beverageName);
+        return beverageID == beverage.beverageID;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(beverageID, beverageName, price);
+        return Objects.hash(beverageID);
     }
 }
